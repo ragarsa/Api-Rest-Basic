@@ -11,7 +11,7 @@ const citas = async (req, res) => {
         console.log(bodyMessage);
         
         const query = `INSERT INTO reservaciones(nombre, apellido, hora, fecha, servicios) 
-        VALUES ('${bodyMessage.name}','${bodyMessage.apellido}','${bodyMessage.hora}','${bodyMessage.fecha}','${bodyMessage.servicios}');`;
+        VALUES ('${bodyMessage.nombre}','${bodyMessage.apellido}','${bodyMessage.hora}','${bodyMessage.fecha}','${bodyMessage.servicios}');`;
         
         connectDb.query(query, (err, result) => {
             if (err) throw err;
